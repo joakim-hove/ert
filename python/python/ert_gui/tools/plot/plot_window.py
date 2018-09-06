@@ -95,8 +95,9 @@ class PlotWindow(QMainWindow):
         # OK
         current_case = getCurrentCaseName()
         print "CurrentCase: %s" % current_case
-        return
+        # OK
         self._case_selection_widget = CaseSelectionWidget(current_case)
+        return
         self._case_selection_widget.caseSelectionChanged.connect(self.keySelected)
         self.addDock("Plot case", self._case_selection_widget)
 
