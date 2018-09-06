@@ -84,7 +84,7 @@ class PlotWindow(QMainWindow):
         self.addPlotWidget(DISTRIBUTION, plots.plotDistribution, [gen_kw_gatherer, custom_kw_gatherer])
         self.addPlotWidget(CROSS_CASE_STATISTICS, plots.plotCrossCaseStatistics, [gen_kw_gatherer, custom_kw_gatherer])
 
-        return
+        # OK - blankt vindu
 
         data_types_key_model = DataTypeKeysListModel(self._ert)
 
@@ -92,6 +92,7 @@ class PlotWindow(QMainWindow):
         self._data_type_keys_widget.dataTypeKeySelected.connect(self.keySelected)
         self.addDock("Data types", self._data_type_keys_widget)
 
+        # Return
         current_case = getCurrentCaseName()
         self._case_selection_widget = CaseSelectionWidget(current_case)
         self._case_selection_widget.caseSelectionChanged.connect(self.keySelected)
