@@ -23,6 +23,7 @@ class PlotCaseModel(QAbstractItemModel):
         return self.createIndex(row, column, parent)
 
     def parent(self, index=None):
+        print "In the parent() method"
         return QModelIndex()
 
     def rowCount(self, parent=None, *args, **kwargs):
