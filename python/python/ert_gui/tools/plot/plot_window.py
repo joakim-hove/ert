@@ -69,7 +69,7 @@ class PlotWindow(QMainWindow):
         self._data_gatherers = []
         """:type: list of PlotDataGatherer """
 
-        return 
+        ## OK - tomt vindu
 
         summary_gatherer = self.createDataGatherer(PDG.gatherSummaryData, key_manager.isSummaryKey, refcaseGatherFunc=PDG.gatherSummaryRefcaseData, observationGatherFunc=PDG.gatherSummaryObservationData, historyGatherFunc=PDG.gatherSummaryHistoryData)
         gen_data_gatherer = self.createDataGatherer(PDG.gatherGenDataData, key_manager.isGenDataKey, observationGatherFunc=PDG.gatherGenDataObservationData)
@@ -84,6 +84,7 @@ class PlotWindow(QMainWindow):
         self.addPlotWidget(DISTRIBUTION, plots.plotDistribution, [gen_kw_gatherer, custom_kw_gatherer])
         self.addPlotWidget(CROSS_CASE_STATISTICS, plots.plotCrossCaseStatistics, [gen_kw_gatherer, custom_kw_gatherer])
 
+        return
 
         data_types_key_model = DataTypeKeysListModel(self._ert)
 
