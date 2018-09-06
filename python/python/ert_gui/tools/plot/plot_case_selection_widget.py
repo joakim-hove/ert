@@ -49,7 +49,7 @@ class CaseSelectionWidget(QWidget):
         self.addCaseSelector(disabled=True, current_case=current_case)
         layout.addStretch()
 
-        return
+        #Feiler her
 
         self.setLayout(layout)
         self.__signal_mapper.mapped[QWidget].connect(self.removeWidget)
@@ -74,6 +74,7 @@ class CaseSelectionWidget(QWidget):
 
 
     def addCaseSelector(self, disabled=False, current_case=None):
+        print "Starter: addCaseSelector: %s" % current_case
         widget = QWidget()
 
         layout = QHBoxLayout()
@@ -115,7 +116,7 @@ class CaseSelectionWidget(QWidget):
 
         self.checkCaseCount()
         self.caseSelectionChanged.emit()
-
+        print "AddCaseSelector complete"
 
 
     def removeWidget(self, widget):
