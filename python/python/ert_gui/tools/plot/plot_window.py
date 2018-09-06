@@ -92,7 +92,7 @@ class PlotWindow(QMainWindow):
         self._data_type_keys_widget.dataTypeKeySelected.connect(self.keySelected)
         self.addDock("Data types", self._data_type_keys_widget)
 
-        # Return
+        return
         current_case = getCurrentCaseName()
         self._case_selection_widget = CaseSelectionWidget(current_case)
         self._case_selection_widget.caseSelectionChanged.connect(self.keySelected)
