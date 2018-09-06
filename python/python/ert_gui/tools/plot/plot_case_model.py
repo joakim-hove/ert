@@ -53,9 +53,11 @@ class PlotCaseModel(QAbstractItemModel):
 
 
     def getAllItems(self):
+        print "Calling getAllItems"
         if self.__data is None:
             self.__data = getAllCasesNotRunning()
 
+        print "getAllCasesNotRunning OK"
         return self.__data
 
     def __iter__(self):

@@ -98,9 +98,9 @@ class PlotWindow(QMainWindow):
         # OK
 
         # The CaseSelectionWidget fails
-        #self._case_selection_widget = CaseSelectionWidget(current_case)
-        #self._case_selection_widget.caseSelectionChanged.connect(self.keySelected)
-        #self.addDock("Plot case", self._case_selection_widget)
+        self._case_selection_widget = CaseSelectionWidget(current_case)
+        self._case_selection_widget.caseSelectionChanged.connect(self.keySelected)
+        self.addDock("Plot case", self._case_selection_widget)
 
         # Fails here
 
