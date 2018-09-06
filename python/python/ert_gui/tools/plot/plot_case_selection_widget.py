@@ -90,7 +90,6 @@ class CaseSelectionWidget(QWidget):
 
         combo.setModel(self.__model)
         # Feiler her
-        return
 
         if current_case is not None:
             index = 0
