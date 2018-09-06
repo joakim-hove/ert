@@ -40,7 +40,8 @@ class PlotWindow(QMainWindow):
 
         self.setWindowTitle("Plotting")
         self.activateWindow()
-        return
+        ## Return HERE: OK
+
 
         self._plot_customizer = PlotCustomizer(self, self._ert.plotConfig())
 
@@ -97,7 +98,7 @@ class PlotWindow(QMainWindow):
         current_plot_widget.setActive()
         self._data_type_keys_widget.selectDefault()
         self._updateCustomizer(current_plot_widget)
-
+        return
 
 
 
