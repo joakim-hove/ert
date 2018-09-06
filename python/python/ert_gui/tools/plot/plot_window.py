@@ -92,11 +92,13 @@ class PlotWindow(QMainWindow):
         self._data_type_keys_widget.dataTypeKeySelected.connect(self.keySelected)
         self.addDock("Data types", self._data_type_keys_widget)
 
-        return
+        # OK
         current_case = getCurrentCaseName()
         self._case_selection_widget = CaseSelectionWidget(current_case)
         self._case_selection_widget.caseSelectionChanged.connect(self.keySelected)
         self.addDock("Plot case", self._case_selection_widget)
+
+        return
 
         current_plot_widget = self._plot_widgets[self._central_tab.currentIndex()]
         current_plot_widget.setActive()
