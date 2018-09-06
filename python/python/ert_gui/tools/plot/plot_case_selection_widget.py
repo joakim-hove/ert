@@ -95,7 +95,7 @@ class CaseSelectionWidget(QWidget):
                 index += 1
 
         combo.currentIndexChanged.connect(self.caseSelectionChanged.emit)
-
+        return
 
 
         layout.addWidget(combo, 1)
