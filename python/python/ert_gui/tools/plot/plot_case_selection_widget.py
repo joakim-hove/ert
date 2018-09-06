@@ -34,7 +34,7 @@ class CaseSelectionWidget(QWidget):
         self.__add_case_button.setIcon(resourceIcon("ide/small/add"))
         self.__add_case_button.clicked.connect(self.addCaseSelector)
 
-        return
+        # OK Her
         add_button_layout.addStretch()
         add_button_layout.addWidget(self.__add_case_button)
         add_button_layout.addStretch()
@@ -44,6 +44,8 @@ class CaseSelectionWidget(QWidget):
         self.__case_layout = QVBoxLayout()
         self.__case_layout.setContentsMargins(0, 0, 0, 0)
         layout.addLayout(self.__case_layout)
+
+        return
 
         self.addCaseSelector(disabled=True, current_case=current_case)
         layout.addStretch()
