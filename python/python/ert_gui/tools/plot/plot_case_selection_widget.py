@@ -18,7 +18,7 @@ class CaseSelectionWidget(QWidget):
 
     def __init__(self, current_case):
         QWidget.__init__(self)
-
+        print "Creating widget: CaseSelectionWidget"
         self.__model = PlotCaseModel()
 
         self.__signal_mapper = QSignalMapper(self)
@@ -34,6 +34,7 @@ class CaseSelectionWidget(QWidget):
         self.__add_case_button.setIcon(resourceIcon("ide/small/add"))
         self.__add_case_button.clicked.connect(self.addCaseSelector)
 
+        return
         add_button_layout.addStretch()
         add_button_layout.addWidget(self.__add_case_button)
         add_button_layout.addStretch()
@@ -50,7 +51,7 @@ class CaseSelectionWidget(QWidget):
         self.setLayout(layout)
 
         self.__signal_mapper.mapped[QWidget].connect(self.removeWidget)
-
+        print "Widget CaseSelectionWidget complete"
 
     def __caseName(self, widget):
         """ @rtype: str """
