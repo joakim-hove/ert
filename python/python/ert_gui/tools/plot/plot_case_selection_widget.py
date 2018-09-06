@@ -81,11 +81,12 @@ class CaseSelectionWidget(QWidget):
         layout.setContentsMargins(0, 0, 0, 0)
         widget.setLayout(layout)
 
+        return
         combo = QComboBox()
         combo.setSizeAdjustPolicy(QComboBox.AdjustToMinimumContentsLengthWithIcon)
         combo.setMinimumContentsLength(20)
         combo.setModel(self.__model)
-        return
+        # Feiler her
 
         if current_case is not None:
             index = 0
