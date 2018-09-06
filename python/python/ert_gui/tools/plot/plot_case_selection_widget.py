@@ -85,6 +85,7 @@ class CaseSelectionWidget(QWidget):
         combo.setSizeAdjustPolicy(QComboBox.AdjustToMinimumContentsLengthWithIcon)
         combo.setMinimumContentsLength(20)
         combo.setModel(self.__model)
+        return
 
         if current_case is not None:
             index = 0
@@ -95,8 +96,7 @@ class CaseSelectionWidget(QWidget):
                 index += 1
 
         combo.currentIndexChanged.connect(self.caseSelectionChanged.emit)
-        return
-
+        # Feiler her
 
         layout.addWidget(combo, 1)
 
