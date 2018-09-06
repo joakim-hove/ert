@@ -46,9 +46,9 @@ class CaseSelectionWidget(QWidget):
         layout.addLayout(self.__case_layout)
 
         #OK Her
+        # Det er addCaseSelector som feiler
         self.addCaseSelector(disabled=True, current_case=current_case)
         layout.addStretch()
-
         #Feiler her
 
         self.setLayout(layout)
@@ -81,13 +81,16 @@ class CaseSelectionWidget(QWidget):
         layout.setContentsMargins(0, 0, 0, 0)
         widget.setLayout(layout)
 
-        # REturn here is OK
+        # Return here is OK
         combo = QComboBox()
         combo.setSizeAdjustPolicy(QComboBox.AdjustToMinimumContentsLengthWithIcon)
-        return 
+        # Return here isi OK
         combo.setMinimumContentsLength(20)
+        print "Calling setModel: %s" % self.__model
+
         combo.setModel(self.__model)
         # Feiler her
+        return
 
         if current_case is not None:
             index = 0
