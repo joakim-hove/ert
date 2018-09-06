@@ -16,7 +16,7 @@ class PlotCaseModel(QAbstractItemModel):
         self.__data = None
 
     def index(self, row, column, parent=None, *args, **kwargs):
-        print "PlotCaseModel::index(%s,%s,%s) " % (row, column, parent)
+        print "%s PlotCaseModel::index(%s,%s,%s) " % (self, row, column, parent)
         internal_index = self.createIndex(row, column, None)
         print "InternalIndex: %s" % internal_index
         return internal_index
