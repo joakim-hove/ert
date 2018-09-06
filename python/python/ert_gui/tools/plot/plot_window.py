@@ -69,6 +69,8 @@ class PlotWindow(QMainWindow):
         self._data_gatherers = []
         """:type: list of PlotDataGatherer """
 
+        return 
+
         summary_gatherer = self.createDataGatherer(PDG.gatherSummaryData, key_manager.isSummaryKey, refcaseGatherFunc=PDG.gatherSummaryRefcaseData, observationGatherFunc=PDG.gatherSummaryObservationData, historyGatherFunc=PDG.gatherSummaryHistoryData)
         gen_data_gatherer = self.createDataGatherer(PDG.gatherGenDataData, key_manager.isGenDataKey, observationGatherFunc=PDG.gatherGenDataObservationData)
         gen_kw_gatherer = self.createDataGatherer(PDG.gatherGenKwData, key_manager.isGenKwKey)
@@ -98,7 +100,7 @@ class PlotWindow(QMainWindow):
         current_plot_widget.setActive()
         self._data_type_keys_widget.selectDefault()
         self._updateCustomizer(current_plot_widget)
-        return
+        # Return here fails
 
 
 
