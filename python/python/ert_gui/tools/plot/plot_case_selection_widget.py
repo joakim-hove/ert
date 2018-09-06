@@ -45,13 +45,13 @@ class CaseSelectionWidget(QWidget):
         self.__case_layout.setContentsMargins(0, 0, 0, 0)
         layout.addLayout(self.__case_layout)
 
-        return
-
+        #OK Her
         self.addCaseSelector(disabled=True, current_case=current_case)
         layout.addStretch()
 
-        self.setLayout(layout)
+        return
 
+        self.setLayout(layout)
         self.__signal_mapper.mapped[QWidget].connect(self.removeWidget)
         print "Widget CaseSelectionWidget complete"
 
