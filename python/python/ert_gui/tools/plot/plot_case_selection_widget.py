@@ -81,9 +81,10 @@ class CaseSelectionWidget(QWidget):
         layout.setContentsMargins(0, 0, 0, 0)
         widget.setLayout(layout)
 
-        return
+        # REturn here is OK
         combo = QComboBox()
         combo.setSizeAdjustPolicy(QComboBox.AdjustToMinimumContentsLengthWithIcon)
+        return 
         combo.setMinimumContentsLength(20)
         combo.setModel(self.__model)
         # Feiler her
